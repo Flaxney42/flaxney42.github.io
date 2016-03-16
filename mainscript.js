@@ -2,8 +2,10 @@
   var xhr = new XMLHttpRequest();
   
   xhr.onreadystatechange = function() {
-    var getNodeValue;
-    if (xhr.status === 200) {
+    var getNodeValue = function(obj, tag) {
+        return obj.getElementsByTagName(tag)[0].firstChild.nodeValue;
+      }
+    if (xhttp.readystate === 4 && xhr.status === 200) {
       var response = xhr.responseXML;
       var events = response.getElementsByTagName('event');
       
@@ -25,9 +27,7 @@
         document.getElementById('content').appendChild(container);
         
       }
-      getNodeValue = function(obj, tag) {
-        return obj.getElementsByTagName(tag)[0].firstChild.nodeValue;
-      }
+     
     }
   };
   xhr.open('GET', 'data.xml', true);
