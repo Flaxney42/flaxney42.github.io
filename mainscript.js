@@ -5,7 +5,7 @@
     var getNodeValue = function(obj, tag) {
         return obj.getElementsByTagName(tag)[0].firstChild.nodeValue;
       }
-    if (xhttp.readystate === 4 && xhr.status === 200) {
+    if (xhr.readystate === 4 && xhr.status === 200) {
       var response = xhr.responseXML;
       var events = response.getElementsByTagName('event');
       
