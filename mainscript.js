@@ -4,7 +4,7 @@
   xhr.onreadystatechange = function() {
     var getNodeValue = function(obj, tag) {
         return obj.getElementsByTagName(tag)[0].firstChild.nodeValue;
-      }
+      };
     if (xhr.readystate === 4 && xhr.status === 200) {
       var response = xhr.responseXML;
       var events = response.getElementsByTagName('event');
@@ -22,7 +22,7 @@
         location.appendChild(newline);
         location.insertBefore(city, newline);
         location.appendChild(document.createTextNode(getNodeValue(events[i], 'date')));
-        container.apendChild(location);
+        container.appendChild(location);
         
         document.getElementById('content').appendChild(container);
         
