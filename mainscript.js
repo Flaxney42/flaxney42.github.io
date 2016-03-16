@@ -1,35 +1,20 @@
-(function() {
-  var xhr = new XMLHttpRequest();
-  
-  xhr.onreadystatechange = function() {
-    var getNodeValue = function(obj, tag) {
-        return obj.getElementsByTagName(tag)[0].firstChild.nodeValue;
-      };
-    if (xhr.readystate === 4 && xhr.status === 200) {
-      var response = xhr.responseXML;
-      var events = response.getElementsByTagName('event');
-      
-      for (var i = 0; i < events.length; i++) {
-        var container, location, city, newline;
-        
-        container = document.createElement('div');
-        container.className = 'event';
-        
-        location = document.createElement('p');
-        city = document.createElement('b');
-        newline = document.createElement('br');
-        city.appendChild(document.createTextNode(getNodeValue(events[i], 'location')));
-        location.appendChild(newline);
-        location.insertBefore(city, newline);
-        location.appendChild(document.createTextNode(getNodeValue(events[i], 'date')));
-        container.appendChild(location);
-        
-        document.getElementById('content').appendChild(container);
-        
-      }
-     
+var xhr = new XMLHttpRequest();
+
+xhr.onload = function() {
+  if (xhr.status === 200) {
+    responseObject = JSON.parse(xhr.responseText);
+    
+    var newContent = ' ';
+    
+    for (var i = 0; i < responseObject.events.length; i++) {
+      newContent += '<div class="event">';
+      newContent += '<p><b>' + responseObject.events[i].location + '</br><br>';
+      newContent += responseObject.events[i].date + '</p>';
+      newContent += '</div>'
     }
-  };
-  xhr.open('GET', 'data.xml', true);
-  xhr.send(null);
-}());
+    document.getElementById('content').innerHTML = newContent;
+  }
+};
+
+xhr.open('GET', 'data.json', true);
+xhr.send(null);
