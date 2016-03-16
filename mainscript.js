@@ -5,7 +5,7 @@
     var getNodeValue;
     if (xhr.status === 200) {
       var response = xhr.responseXML;
-      var events = response.getElementByTagName('event');
+      var events = response.getElementsByTagName('event');
       
       for (var i = 0; i < events.length; i++) {
         var container, location, city, newline;
