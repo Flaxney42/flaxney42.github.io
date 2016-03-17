@@ -1,7 +1,0 @@
-{
- "events": [
-   { "location": "Paris, CPT", "date" : "May 1"},
-   { "location": "Brussels, JNB", "date" : "May 15"},
-   { "location": "Tel Aviv, PE", "date" : "May 30"}
- ]
-}
