@@ -1,7 +1,7 @@
 {
  "events": [
-   { "location": "Cape Town, CPT", "date" : "May 1"},
-   { "location": "Johannesburg, JNB", "date" : "May 15"},
-   { "location": "Port Elizabeth, PE", "date" : "May 30"}
+   { "location": "Paris, CPT", "date" : "May 1"},
+   { "location": "Brussels, JNB", "date" : "May 15"},
+   { "location": "Tel Aviv, PE", "date" : "May 30"}
  ]
 }
