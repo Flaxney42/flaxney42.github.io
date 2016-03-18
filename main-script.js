@@ -1,15 +1,15 @@
 $(function() {
   'use strict';
-  $(':header').addClass('headline');
-  $('li:lt(3)').hide().fadeIn(1500);
-  $('li').on('click', function() {
-    $(this).remove();
-  });
-  $('li em').addClass('seasonal');
-  $('li.hot').addClass('favorite');
-  $('li[id!="one"]')
-  .hide()
-  .delay(500)
-  .fadeIn(1400);
+  $('li').on('click', function(e) {
+    $('li span').remove();
+    var date = new Date(Date.now());
+    console.log(date);
+    console.log(e.timeStamp);
+    date.setTime(e.timeStamp);
+    console.log(date);
+    var clicked = date.toDateString();
+    console.log(clicked);
+    $(this).append('<span class="date">' + clicked + ' ' + e.type + '</span>');
+  })
 });
 
