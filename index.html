@@ -1,22 +1,31 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>JQuery Test Page</title>
-	<meta charset="utf-8">
-	<link rel="stylesheet" href="main-style.css">
-	<
+    <meta charset="utf-8" />
+	<title>Hello React</title>
+	<script src="build/react.js"></script>
+	<script src="build/react-dom.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.23/browser.min.hs"></script>
   </head>
   <body>
-    <main id="page">
-	  <h1 id="header">List</h1>
-	  <ul>
-	    <li id="one" class="hot"><em>fresh</em> figs</li>
-		<li id="two" class="hot">pine nuts</li>
-		<li id="three" class="hot">honey</li>
-		<li id="four">balsamic vinegar</li>
-	  </ul>
-	</main>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
-	<script charset="utf-8" src="main-script.js"></script>
+    <div id="example"></div>
+	<script type="text/babel">
+	  var HelloWorld = React.createClass({
+	    render: function() {
+		 return (
+		   <p> Hello, <input type="text" placeholder="your name here" />!
+		   It is {this.props.date.toTimeString()}
+		   </p>
+		 );
+		}
+	  });
+	  
+	  setInterval(function() {
+	    ReactDOM.render(
+		  <HelloWorld date={new Date()} />,
+		  document.getElementById('example')
+		);
+	  }, 500);
+	</script>
   </body>
 </html>
