@@ -16,14 +16,14 @@
   }
   
   function requestXmlAjax() {
-    var xhr = new XMLHttpRequest();
-    xhr.onload = function() {
-      if (xhr.status === 200) {
-        var response = xhr.responseXML;
-        var paragraphs = response.getElementsByTagName('p');
-        document.getElementById('xml').innerHTML = paragraphs;
-      }
-    };
+    
+    var response = xhr.responseXML;
+    var xmlTags = response.getElementsByTagName('p');
+    var paragraph = document.getElementById('xml');
+    
+    paragraph.appendChild(document.createTextNode(getNodeValue(xmlTags[i]), 'p'));
+   
+    
     
     xhr.open('GET', '/xml-data/xml-data.xml', true);
     xhr.send(null);
