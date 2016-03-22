@@ -23,6 +23,9 @@
     
     paragraph.appendChild(document.createTextNode(getNodeValue(xmlTags[i]), 'p'));
    
+   function getNodeValue(obj, tag) {
+     return obj.getElementsByTagName(tag)[0].firstChild.nodeValue;
+   }
     
     
     xhr.open('GET', '/xml-data/xml-data.xml', true);
