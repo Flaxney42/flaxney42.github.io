@@ -22,7 +22,8 @@
     if (xhr.status === 200) {
       responseObject = JSON.parse(xhr.responseText);
       var newContent = '';
-      newContent += responseObject.text;
+      newContent += responseObject["text"];
+      console.log(responseObject["text"]);
       document.getElementById('json').innerHTML = newContent;
     }
     xhr.open('GET', '/json-data/json-data.json', true);
