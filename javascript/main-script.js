@@ -16,7 +16,7 @@
   }
   
   function requestXmlAjax() {
-    
+    var xhr = new XMLHttpRequest();
     var response = xhr.responseXML;
     var xmlTags = response.getElementsByTagName('p');
     var paragraph = document.getElementById('xml');
