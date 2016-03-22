@@ -1,8 +1,8 @@
 body {
   background-color: #eeeeee;
   color: #000033;
-  line height: 1.428571429;
-  font size: 13px;
+  line-height: 1.428571429;
+  font-size: 15px;
 }
 
 main {
@@ -14,4 +14,5 @@ main {
   width: 80%;
   height: 80%;
   background-color: #ffffff;
+  padding: 5em 6em 5em 5em;
 }
