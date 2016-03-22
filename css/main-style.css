@@ -1,0 +1,17 @@
+body {
+  background-color: #eeeeee;
+  color: #000033;
+  line height: 1.428571429;
+  font size: 13px;
+}
+
+main {
+  padding: 30px;
+}
+
+.content {
+  margin: auto;
+  width: 80%;
+  height: 80%;
+  background-color: #fffffff;
+}
