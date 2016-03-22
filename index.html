@@ -7,10 +7,26 @@
   </head>
   <body>
     <h1>Content inserted into page via ajax:</h1>
+	
     <div id="flex-container">
-    <div class="flex-item" ><h3>HTML</h3><p>Lorem ipsum dolor sit amet.</p></div>
-	<div class="flex-item" ><h3>XML</h3><p>Lorem ipsum dolor sit amet.</p></div>
-	<div class="flex-item" ><h3>JSON</h3><p>Lorem ipsum dolor sit amet.</p></div>
+	
+    <div class="flex-item" >
+	  <h3>HTML</h3>
+	  <p id="html"></p>
+	  <button id="addHtmlBtn">Click to send ajax request</button>
+	</div>
+	
+	<div class="flex-item" >
+	<h3>XML</h3>
+	<p id="xml">Lorem ipsum dolor sit amet.</p>
+	</div>
+	
+	<div class="flex-item" >
+	<h3>JSON</h3>
+	<p id="json">Lorem ipsum dolor sit amet.</p>
+	</div>
+	
    </div>
+   <script type="text/javascript" src="javascript/main-script.js" charset="UTF-8"></script>
   </body>
 </html>
