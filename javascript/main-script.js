@@ -61,10 +61,10 @@
 							
 		switch(key) {
 			case 'beverages':
-				vals = data.beverages.split(",");
+				vals = data.beverages;
 				break;
 			case 'snacks':
-				vals = data.snacks.split(",");
+				vals = data.snacks;
 				break;
 			case 'base':
 				vals = ['Please choose from above'];
