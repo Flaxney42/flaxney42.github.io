@@ -37,7 +37,7 @@
   function requestXmlAjax() {
      var xhr = new XMLHttpRequest();
      xhr.onload = function() {
-       if (xhr.readystate === 4 && xhr.status === 200) {
+       if (xhr.status === 200) {
          var xmlDoc = xml.responseXML;
          var xmlContent = xmlDoc.getElementsByTagName("p");
          document.getElementById("xml").innerHTML = xmlContent;
@@ -46,6 +46,7 @@
      xhr.open("GET", '/xml-data/xml-data.xml', true);
      xhr.send(null);
   }
+  /* Add event listeners to button elements */
   htmlButton.addEventListener("click", requestHtmlAjax);
   jsonButton.addEventListener("click", requestJsonAjax);
   xmlButton.addEventListener("click", requestXmlAjax);
