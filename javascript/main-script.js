@@ -39,7 +39,7 @@
      xhr.onload = function() {
        if (xhr.status === 200) {
          var xmlDoc = xhr.responseXML;
-         var xmlContent = xmlDoc.getElementsByTagName("p");
+         var xmlContent = xmlDoc.getElementsByTagName("p")[0].childNodes[0].nodeValue;
          document.getElementById("xml").innerHTML = xmlContent;
        }
      }
