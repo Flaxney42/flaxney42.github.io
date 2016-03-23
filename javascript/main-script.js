@@ -35,8 +35,8 @@
   
   /* Request xml data from the server */
   function requestXmlAjax() {
-     var xhttp = new XMLHttpRequest();
-     xhttp.onload = function() {
+     var xhr = new XMLHttpRequest();
+     xhr.onload = function() {
        if (xhttp.readystate === 4 && xhttp.status === 200) {
          var xmlDoc = xml.responseXML;
          var xmlContent = xmlDoc.getElementsByTagName("p");
