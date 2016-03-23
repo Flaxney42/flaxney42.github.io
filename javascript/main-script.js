@@ -9,7 +9,7 @@
   function requestHtmlAjax() {
       var xhr = new XMLHttpRequest();
       xhr.onload = function() {
-        if (xhr.status >= = 200 && xhr.status < 400) {
+        if (xhr.status >== 200 && xhr.status < 400) {
           document.getElementById('html').innerHTML = xhr.responseText;
         }
       };
@@ -21,7 +21,7 @@
   function requestJsonAjax() {
       var xhr = new XMLHttpRequest();
       xhr.onload = function() {
-        if (xhr.status >= = 200 && xhr.status < 400) {
+        if (xhr.status >== 200 && xhr.status < 400) {
           var responseObject = JSON.parse(xhr.responseText);
           for (var i = 0; i < responseObject.restaurants.length; i++) {
             document.getElementById('json').innerHTML += responseObject.restaurants[i].name +
@@ -39,7 +39,7 @@
   function requestXmlAjax() {
       var xhr = new XMLHttpRequest();
       xhr.onload = function() {
-        if (xhr.status >= = 200 && xhr.status < 400) {
+        if (xhr.status >== 200 && xhr.status < 400) {
           var xmlDoc = xhr.responseXML;
           var xmlContent = xmlDoc.getElementsByTagName("p")[0].childNodes[0].nodeValue;
           document.getElementById("xml").innerHTML = xmlContent;
