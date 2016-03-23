@@ -37,7 +37,7 @@
   function requestXmlAjax() {
      var xhr = new XMLHttpRequest();
      xhr.onload = function() {
-       if (xhr.readystate === 4 && xhttp.status === 200) {
+       if (xhr.readystate === 4 && xhr.status === 200) {
          var xmlDoc = xml.responseXML;
          var xmlContent = xmlDoc.getElementsByTagName("p");
          document.getElementById("xml").innerHTML = xmlContent;
