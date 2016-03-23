@@ -1,3 +1,7 @@
 {
-  "text" : "Lorem ipsum dolor sit amet"
+  "restaurants" : [
+      {"name" : "Le fancy baguette"},
+      {"name" : "Authentic Sicilian Frozen Cuisine"},
+      {"name" : "Gastric Distress"}
+  ]
 }
