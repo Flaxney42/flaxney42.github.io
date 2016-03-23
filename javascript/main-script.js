@@ -38,7 +38,7 @@
      var xhr = new XMLHttpRequest();
      xhr.onload = function() {
        if (xhr.status === 200) {
-         var xmlDoc = xml.responseXML;
+         var xmlDoc = xhr.responseXML;
          var xmlContent = xmlDoc.getElementsByTagName("p");
          document.getElementById("xml").innerHTML = xmlContent;
        }
