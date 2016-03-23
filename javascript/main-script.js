@@ -3,6 +3,7 @@
   /* Assign value of button elements to variables */
   var htmlButton = document.getElementById("addHtmlBtn");
   var jsonButton = document.getElementById("addJsonBtn");
+  var xmlButton = document.getElementById("addXmlBtn")
   
   /* Request HTML file data from the server */
   function requestHtmlAjax() {
@@ -33,7 +34,19 @@
   }
   
   /* Request xml data from the server */
-  
+  function requestXmlAjax() {
+     var xhttp = new XMLHttpRequest();
+     xhttp.onload = function() {
+       if (xhttp.readystate === 4 && xhttp.status === 200) {
+         var xmlDoc = xml.responseXML;
+         var xmlContent = xmlDoc.getElementsByTagName("p");
+         document.getElementById("xml").innerHTML = xmlContent;
+       }
+     }
+     xhr.open("GET", '/xml-data/xml-data.xml', true);
+     xhr.send(null);
+  }
   htmlButton.addEventListener("click", requestHtmlAjax);
-  jsonButton.addEventListener("click", requestJsonAjax)
+  jsonButton.addEventListener("click", requestJsonAjax);
+  xmlButton.addEventListener("click", requestXmlAjax);
 }());
