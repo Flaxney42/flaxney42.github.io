@@ -27,6 +27,7 @@
           document.getElementById('json').innerHTML += responseObject.restaurants[i].name +
             ", ";
         }
+        document.getElementById('json').innerHTML = 
         document.getElementById('json').innerHTML.replace(/,\s*$/, "");
       }
     };
